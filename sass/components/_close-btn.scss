@@ -1,0 +1,23 @@
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  color: $social-media-color;
+  background-color: transparent;
+  fill: $main-black-color;
+
+  border: 1px solid $close-btn-border-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: fill $animation-duration $animation-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

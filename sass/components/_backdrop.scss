@@ -1,0 +1,20 @@
+.hero-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $hero-backdrop-color;
+
+  transition: opacity $animation-duration $animation-function,
+    visibility $animation-duration $animation-function;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

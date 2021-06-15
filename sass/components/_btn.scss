@@ -1,0 +1,34 @@
+.btn {
+  min-width: 200px;
+  height: 50px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: $secondary-font-size;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $main-white-color;
+  background-color: $accent-color;
+
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+
+  transition: background-color $animation-duration $animation-function;
+
+  &:hover,
+  &:focus {
+    background-color: $modal-btn-hov-color;
+  }
+
+  &__name {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin grid-list($gap: 30px) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -$gap;
+  margin-left: -$gap;
+}
+
+@mixin grid-item($column, $gap: 30px) {
+  margin-top: $gap;
+  margin-left: $gap;
+  flex-basis: calc((100% / #{$column}) - #{$gap});
+}
