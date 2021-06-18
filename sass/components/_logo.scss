@@ -1,19 +1,23 @@
 .logo {
   font-family: $logo-font;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: $accent-color;
+}
 
-  &__end {
-    &_theme_light {
-      color: $main-black-color;
-    }
+.logo__end_theme_light {
+  color: $main-black-color;
+}
 
-    &_theme_dark {
-      color: $main-white-color;
-    }
+.logo__end_theme_dark {
+  color: $main-white-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
   }
 }

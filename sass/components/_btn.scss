@@ -24,11 +24,12 @@
     background-color: $modal-btn-hov-color;
   }
 
-  &__name {
+  .btn__name {
     margin-right: 10px;
   }
 
-  &__icon {
+  .btn__icon {
     fill: currentColor;
+    text-align: center;
   }
 }

@@ -1,37 +1,93 @@
-.feature {
-  padding-top: 94px;
-  padding-bottom: 47px;
+.feature__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &__list {
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: $light-bg-color;
+
+  border-radius: 4px;
+}
+
+.feature__subtitle {
+  margin-bottom: 10px;
+
+  font-size: $main-font-size;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $title-color;
+}
+
+.feature__description {
+  line-height: 1.71;
+}
+
+@media screen and (max-width: 767px) {
+  .feature__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .doing {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature__list {
     @include grid-list;
   }
+  .feature__item {
+    @include grid-item(2);
+  }
+}
 
-  &__item {
+@media screen and (min-width: 1200px) {
+  .feature__list {
+    @include grid-list;
+    padding-bottom: 94px;
+  }
+  .feature__item {
     @include grid-item(4);
   }
 
-  &__thumb {
+  .doing__list {
+    @include grid-list;
+  }
+
+  .doing__item {
+    position: relative;
+
+    @include grid-item(3);
+  }
+
+  .doing__overlay {
+    position: absolute;
+    overflow: auto;
+    bottom: 0;
+    left: 0;
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    height: 120px;
+    padding: 15px;
+    width: 100%;
+    height: 70px;
 
-    background-color: $light-bg-color;
-
-    border-radius: 4px;
+    background-color: $doing-overlay-color;
   }
 
-  &__subtitle {
-    margin-bottom: 10px;
+  .doing__title {
+    margin: auto;
 
-    line-height: 1.17;
+    text-align: center;
     text-transform: uppercase;
 
-    color: $title-color;
-  }
-
-  &__description {
-    line-height: 1.71;
+    color: $main-white-color;
   }
 }

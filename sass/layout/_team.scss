@@ -1,40 +1,64 @@
 .team {
   background-color: $light-bg-color;
+}
 
-  &__list {
-    @include grid-list;
+.team__item {
+  overflow: hidden;
+
+  border-radius: 0px 0px 4px 4px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team__card {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  background-color: $main-white-color;
+}
+
+.team__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: $secondary-font-size;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-color;
+}
+
+.team__position {
+  margin-bottom: 16px;
+  text-align: center;
+
+  font-size: $secondary-font-size;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 767px) {
+  .team__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    @include grid-list();
   }
 
-  &__item {
+  .team__item {
+    @include grid-item(2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
     @include grid-item(4);
-  }
-
-  &__card {
-    padding: 30px 32px;
-
-    background-color: $main-white-color;
-
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-
-  &__name {
-    margin-bottom: 10px;
-
-    font-weight: 500;
-    font-size: $secondary-font-size;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: $title-color;
-  }
-
-  &__position {
-    margin-bottom: 16px;
-    text-align: center;
-
-    font-size: $secondary-font-size;
-    letter-spacing: 0.03em;
   }
 }

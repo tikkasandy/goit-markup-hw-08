@@ -5,18 +5,24 @@
   transform: translate(-50%, -50%);
 
   padding: 40px;
-  width: 528px;
-  height: 580px;
+  width: calc(100vw - 30px);
+  max-width: 480px;
 
   background-color: $main-white-color;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
 
-  &__close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+.modal-window__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    max-width: 528px;
   }
 }
