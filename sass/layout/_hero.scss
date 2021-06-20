@@ -1,10 +1,16 @@
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-left: auto;
   margin-right: auto;
-  padding-top: 118px;
-  padding-bottom: 118px;
   max-width: 480px;
+  height: 400px;
+
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   text-align: center;
 
@@ -16,6 +22,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  max-width: 360px;
 
   font-weight: 900;
   font-size: 26px;
@@ -39,25 +46,20 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero {
     max-width: 768px;
-
     background-image: linear-gradient(
         $hero-gradient-color,
         $hero-gradient-color
       ),
       url("../images/hero/hero-cover-tablet.jpg");
   }
-
-  .hero__title {
-    width: 360px;
-  }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
-  (min-resolution: 192dpi) and (min-width: 768px),
-  (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 481px),
+  (min-resolution: 192dpi) and (min-width: 481px),
+  (min-resolution: 2dppx) and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(
         $hero-gradient-color,
@@ -67,13 +69,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 200px 300px;
-    // padding-bottom: 200px;
-
     max-width: 1600px;
 
     background-image: linear-gradient(
@@ -82,9 +79,27 @@
       ),
       url("../images/hero/hero-cover-desktop.jpg");
   }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px),
+  (min-resolution: 192dpi) and (min-width: 769px),
+  (min-resolution: 2dppx) and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        $hero-gradient-color,
+        $hero-gradient-color
+      ),
+      url("../images/hero/hero-cover-desktop@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+  }
 
   .hero__title {
-    width: 696px;
+    max-width: 696px;
 
     font-size: 44px;
     line-height: 1.37;
@@ -93,17 +108,5 @@
     text-transform: uppercase;
 
     color: $main-white-color;
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-  (min-resolution: 192dpi) and (min-width: 1200px),
-  (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero {
-    background-image: linear-gradient(
-        $hero-gradient-color,
-        $hero-gradient-color
-      ),
-      url("../images/hero/hero-cover-desktop@2x.jpg");
   }
 }

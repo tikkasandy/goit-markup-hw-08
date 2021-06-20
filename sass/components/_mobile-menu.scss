@@ -87,6 +87,10 @@
     font-size: 34px;
     color: $accent-color;
   }
+
+  &_tel {
+    color: $accent-color;
+  }
 }
 
 .mobile-social-medias {
@@ -115,6 +119,16 @@
   letter-spacing: 0.02em;
 
   color: $accent-color;
+}
+
+.current-page {
+  color: $accent-color;
+}
+
+@media screen and (min-width: 400px) {
+  .mobile-contacts__link_tel {
+    font-size: 36px;
+  }
 }
 
 @media screen and (min-width: 768px) {

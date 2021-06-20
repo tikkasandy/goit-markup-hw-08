@@ -161,4 +161,22 @@
       margin-right: 30px;
     }
   }
+
+  .header-contacts__link {
+    font-size: 14px;
+  }
+
+  .header-contacts__icon {
+    margin-right: 8px;
+
+    &-email {
+      width: 16px;
+      height: 12px;
+    }
+
+    &-tel {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
